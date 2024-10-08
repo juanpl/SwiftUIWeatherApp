@@ -17,9 +17,9 @@ enum APIEndpoint {
     private var path: String {
         switch self {
             case .coordinatesByLocationName(let city):
-                return "http://api.openweathermap.org/geo/1.0/direct?q=\(city)&appid=\(Constants.Keys.weatherAPIKey)"
+                return "/geo/1.0/direct?q=\(city)&appid=\(Constants.Keys.weatherAPIKey)"
             case .weatherByLatLot(let lat, let lon):
-                return "https://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(lon)&appid=\(Constants.Keys.weatherAPIKey)"
+                return "/data/2.5/weather?lat=\(lat)&lon=\(lon)&appid=\(Constants.Keys.weatherAPIKey)"
         }
     }
     
