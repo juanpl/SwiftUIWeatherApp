@@ -13,5 +13,4 @@ struct WeatherResponse: Decodable {
 
 struct Weather: Decodable {
     let temp: Double
-    let feels_like: Double
 }
